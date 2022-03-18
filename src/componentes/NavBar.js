@@ -1,4 +1,6 @@
-import React from "react"
+import React from "react";
+
+import Button from '@mui/material/Button';
 
 function NavBar(){
 
@@ -6,9 +8,9 @@ function NavBar(){
         <header>
             <div>
                 <ul>
-                    <li>Mochilas</li>
-                    <li>Carteras</li>
-                    <li>Riñoneras</li>
+                    <button size="small">Mochilas</button>
+                    <button size="small">Carteras</button>
+                    <button size="small">Riñoneras</button>
                 </ul>
             </div>
         </header>
