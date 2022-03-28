@@ -1,6 +1,7 @@
 import React from "react";
-
 import Button from '@mui/material/Button';
+import CartWidget from "../CartWidget/CartWidget";
+
 
 function NavBar(){
 
@@ -13,6 +14,9 @@ function NavBar(){
                     <button size="small">Riñoneras</button>
                 </ul>
             </div>
+
+            <CartWidget/>
+
         </header>
     )
 }
