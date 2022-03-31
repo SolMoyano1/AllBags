@@ -1,12 +1,14 @@
-const listaProductos=({children}) => {
-    
+export default function listaProductos (tipo, nombre, precio){
+
     return(
         <div>
-            <p>{children}</p>
-        
+
+            <p>{tipo}</p>
+            <p>{nombre}</p>
+            <p>Precio: ${precio}</p>
+
         </div>
             
     )
-}
 
-export default listaProductos;
+}

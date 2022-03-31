@@ -1,6 +1,10 @@
 import React from "react";
+
 import Button from '@mui/material/Button';
+
 import CartWidget from "../CartWidget/CartWidget";
+
+import listaProductos from "../ListaProductos/listaProductos";
 
 
 function NavBar(){
@@ -16,6 +20,12 @@ function NavBar(){
             </div>
 
             <CartWidget/>
+
+            <listaProductos />
+            
+            <listaProductos />
+            <listaProductos />
+            
 
         </header>
     )

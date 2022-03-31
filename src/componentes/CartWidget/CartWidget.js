@@ -1,7 +1,9 @@
+import Carrito from "../Multimedia/carrito-de-compras.png";
+
 const CartWidget=() => {
     return(
         <div>
-            <img src={"../Multimedia/carrito-de-compras.png"}></img>
+            <img src={Carrito}></img>
         </div>
     )
 }
