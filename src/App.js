@@ -3,7 +3,7 @@ import NavBar from './componentes/NavBar/NavBar';
 import CartWidget from './componentes/CartWidget/CartWidget';
 import Tarjetas from './componentes/Tarjetas/Tarjetas';
 import AgregarItems from './componentes/AgregarItems/AgregarItems';
-import listaProductos from './componentes/ListaProductos/listaProductos';
+import ListaProductos from './componentes/ListaProductos/ListaProductos';
 
 function App() {
 
@@ -13,9 +13,9 @@ function App() {
       <NavBar />
       <CartWidget />
 
-      <listaProductos>
+      <ListaProductos>
         <h2>Articulos Disponibles</h2>
-      </listaProductos>
+      </ListaProductos>
       <AgregarItems/>
 
       

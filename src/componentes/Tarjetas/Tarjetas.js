@@ -1,3 +1,4 @@
+import agregarItems from "../AgregarItems/AgregarItems"
 
 
 export default function tarjetasDeArticulos ({caracteristicas}){

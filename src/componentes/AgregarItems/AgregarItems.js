@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from "react"
 
-export default function agregarItems (){
+
+const agregarItems = () =>{
     
     const [count, setCount]= useState (0);
 
@@ -17,6 +18,6 @@ export default function agregarItems (){
         
         <button onClick={quitar}> - </button>
     </div>
-    
-    
 }
+
+export default agregarItems 
