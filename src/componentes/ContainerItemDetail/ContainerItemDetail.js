@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 
 import ItemDetail from '../ItemDetail/ItemDetail';
 
-import mockProducto from '../../Utils/productMock';
-
 
 const ItemDetailContainer = () => {
 
@@ -11,7 +9,7 @@ const ItemDetailContainer = () => {
 
     const getProductos = () => {
         return new Promise((resolve, reject) => {
-            return resolve(mockProducto)
+            return resolve(articulos)
         })
     }
 
