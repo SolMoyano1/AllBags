@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from "react"
 
 
-const agregarItems = () =>{
+const AgregarItems = () =>{
     
     const [count, setCount]= useState (0);
 
@@ -20,4 +20,4 @@ const agregarItems = () =>{
     </div>
 }
 
-export default agregarItems 
+export default AgregarItems;

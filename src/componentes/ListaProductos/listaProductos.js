@@ -1,7 +1,8 @@
 import Tarjetas from '../Tarjetas/Tarjetas';
+import AgregarItems from '../AgregarItems/AgregarItems';
 
 
-const listaDeProductos = ({children}) => {
+const ListaProductos = ({children}) => {
 
     const articulos = [
         
@@ -127,7 +128,11 @@ const listaDeProductos = ({children}) => {
                 const {id} = cadaArticulo
 
                 return(
-                    <Tarjetas caracteristicas={cadaArticulo} key={id}/>
+                    <div>
+                        <Tarjetas caracteristicas={cadaArticulo} key={id}/>
+                        <AgregarItems />
+                    </div>
+                    
                 );
             })};
 
@@ -136,4 +141,4 @@ const listaDeProductos = ({children}) => {
 
 }
 
-export default listaDeProductos;
+export default ListaProductos;

@@ -1,26 +1,35 @@
 import './App.css';
 import NavBar from './componentes/NavBar/NavBar';
 import CartWidget from './componentes/CartWidget/CartWidget';
-import Tarjetas from './componentes/Tarjetas/Tarjetas';
-import AgregarItems from './componentes/AgregarItems/AgregarItems';
-import ListaProductos from './componentes/ListaProductos/ListaProductos';
+import Home from './paginas/Home';
+import Contacto from './paginas/Contacto';
+
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { render } from 'react-dom';
 
 function App() {
-
+  
   return (
-    <div className="App">
-      
-      <NavBar />
-      <CartWidget />
 
-      <ListaProductos>
-        <h2>Articulos Disponibles</h2>
-      </ListaProductos>
-      <AgregarItems/>
+    <div className="fondo">
 
-      
+      <BrowserRouter>
+       <NavBar />
+       <CartWidget />
+
+       <Routes>
+         <Route path='/' element= {<Home />} />
+       </Routes>
+
+       <Routes>
+         <Route path='/contacto' element= {<Contacto />} />
+       </Routes>
+
+      </BrowserRouter>
     </div>
+
   );
+  
 }
 
 export default App;
