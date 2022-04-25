@@ -1,11 +1,41 @@
 import Carrito from "../Multimedia/carrito-de-compras.png";
+import { useContext } from "react";
+import CartContext from "../../context/CartContext";
+import MenuItem from '@mui/material/MenuItem';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 
 const CartWidget=() => {
-    return(
+
+    const {cartProducts} = useContext(CartContext);
+    console.log("cartProducts: ", cartProducts);
+    
+    return (
         <div>
-            <img src={Carrito}></img>
+            
+            <p>{cartProducts.length}</p>
+            
+            {cartProducts.map( (cartProduct) => {
+                
+                return(
+                        <MenuItem key={cartProduct.id}>
+                            
+                            <div>
+                                <img src={Carrito}></img>
+                            </div>
+
+                            <div>
+                                <DeleteIcon />
+                            </div>
+
+                        </MenuItem>
+                    )
+                })}
+                
+                
         </div>
     )
+
 }
 
 export default CartWidget;

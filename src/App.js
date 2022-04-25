@@ -7,25 +7,32 @@ import Contacto from './paginas/Contacto';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import { render } from 'react-dom';
 
+import { CartProvider } from './context/CartContext';
+
 function App() {
   
   return (
 
     <div className="fondo">
 
-      <BrowserRouter>
-       <NavBar />
-       <CartWidget />
+      <CartProvider>
+        <BrowserRouter>
+          
+          <NavBar />
+          
+          <CartWidget />
 
-       <Routes>
-         <Route path='/' element= {<Home />} />
-       </Routes>
+          <Routes>
+            <Route path='/' element= {<Home />} />
+          </Routes>
+          
+          <Routes>
+            <Route path='/contacto' element= {<Contacto />} />
+          </Routes>
+          
+        </BrowserRouter>
 
-       <Routes>
-         <Route path='/contacto' element= {<Contacto />} />
-       </Routes>
-
-      </BrowserRouter>
+      </CartProvider>
     </div>
 
   );
