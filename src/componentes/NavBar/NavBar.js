@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import CartWidget from "../CartWidget/CartWidget";
 
 
-function NavBar(){
+function NavBar(props){
 
     return(
         <header>
