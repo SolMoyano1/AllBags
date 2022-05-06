@@ -1,8 +1,11 @@
 import Tarjetas from '../Tarjetas/Tarjetas';
 import AgregarItems from '../AgregarItems/AgregarItems';
+import { useEffect, useState} from 'react';
 
 
 const ListaProductos = ({children}) => {
+
+    const [productos, setProductos]= useState([]);
 
     const articulos = [
         
@@ -124,21 +127,29 @@ const ListaProductos = ({children}) => {
 
     const verProductos =  new Promise ((resolve,reject) =>{
         
-        return setTimeout (() =>{
+        setTimeout (() =>{
             resolve (articulos);
         }, 2000);
+
     });
     
+    useEffect ( () =>{
+        verProductos.then ((res)=>{
+
+            setProductos(res);
+        })
+    },[])
+    console.log("Soy productos", productos);
 
     return(
         <div>
 
             <h2> {children} </h2>
-            {articulos.map ( (cadaArticulo)=> {
+            {productos.map ( (cadaArticulo, index)=> {
                 const {id} = cadaArticulo
 
                 return(
-                    <div>
+                    <div key={index}>
                         <Tarjetas caracteristicas={cadaArticulo} key={id}/>
                         <AgregarItems />
                     </div>

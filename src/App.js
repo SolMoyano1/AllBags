@@ -13,26 +13,24 @@ function App() {
   
   return (
 
-    <div className="fondo">
+    <div className="App">
+      
+      
 
       <CartProvider>
+      
         <BrowserRouter>
-          
-          <NavBar />
-          
-          <CartWidget />
-
+        
+         <NavBar />
           <Routes>
             <Route path='/' element= {<Home />} />
-          </Routes>
-          
-          <Routes>
             <Route path='/contacto' element= {<Contacto />} />
           </Routes>
           
         </BrowserRouter>
-
+      
       </CartProvider>
+
     </div>
 
   );

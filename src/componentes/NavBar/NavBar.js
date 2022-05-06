@@ -7,6 +7,7 @@ import CartWidget from "../CartWidget/CartWidget";
 
 function NavBar(props){
 
+    console.log("Hola soy sol")
     return(
         <header>
             <div>
@@ -17,7 +18,6 @@ function NavBar(props){
                 </ul>
             </div>
 
-            <CartWidget/>
 
         </header>
     )

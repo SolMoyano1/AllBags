@@ -15,7 +15,7 @@ const CartWidget=() => {
             
             <p>{cartProducts.length}</p>
             
-            {cartProducts.map( (cartProduct) => {
+            {cartProducts? cartProducts.map( (cartProduct) => {
                 
                 return(
                         <MenuItem key={cartProduct.id}>
@@ -30,7 +30,9 @@ const CartWidget=() => {
 
                         </MenuItem>
                     )
-                })}
+            }): <div> <h1> No hay productos</h1> </div>
+            
+            }
                 
                 
         </div>
