@@ -1,20 +1,42 @@
-import agregarItems from "../AgregarItems/AgregarItems"
+import './Tarjetas.css'
+import AgregarItems from '../AgregarItems/AgregarItems'
+import React,{ useState, useEffect, useContext } from 'react'
+//context
+import CartContext from '../../context/CartContext';
 
 
-export default function tarjetasDeArticulos ({caracteristicas}){
+
+
+function tarjetasDeArticulos ({caracteristicas, action}){
     
-    const {foto, tipo, nombre, precio}= caracteristicas
+    const { tarjetaArticulo, agregarTarjetaAritculo } = useContext(CartContext);
+
+    const {foto, tipo, nombre, precio, id}= caracteristicas;
     
+
+    const agregarAlCarrito = (e) => {
+        e.stopPropagation();
+        console.log("Productos agregados:", tarjetaArticulo);
+        agregarTarjetaAritculo(caracteristicas);
+    }
+
     return(
         <div>
-            <aside>
-               <img src={foto} alt={foto} /> 
+
+            <aside >
+                <p className='caracts'>{tipo} {nombre}</p>
+                 
+                <img src={`./${foto}`} alt={foto} className="fotos" /> 
+                 
+                <p className='caracts'>Precio: ${precio}</p>
+
+                <button onClick={agregarAlCarrito}> <AgregarItems /></button>
+
             </aside>
-            
-            <p>{tipo}</p>
-            <p>{nombre}</p>
-            <p>Precio: ${precio}</p>
+
         </div>
     )
-
 }
+
+export default tarjetasDeArticulos;
+

@@ -1,32 +1,41 @@
 import './App.css';
-import NavBar from './componentes/NavBar/NavBar';
-import CartWidget from './componentes/CartWidget/CartWidget';
-import Home from './paginas/Home';
-import Contacto from './paginas/Contacto';
-
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import { render } from 'react-dom';
 
+//componentes
+import NavBar from './componentes/NavBar/NavBar';
+
+//paginas
+import Carteras from './paginas/Carteras';
+import Mochilas from './paginas/Mochilas';
+import Rinioneras from './paginas/Rinioneras';
+
+//context
 import { CartProvider } from './context/CartContext';
+
+
 
 function App() {
   
   return (
 
-    <div className="App">
-      
-      
-
+    <div className="App, fondo">
+  
       <CartProvider>
       
         <BrowserRouter>
         
          <NavBar />
-          <Routes>
-            <Route path='/' element= {<Home />} />
-            <Route path='/contacto' element= {<Contacto />} />
+         
+          <Routes >
+
+            <Route path='/' element= { <div><Mochilas/> <Carteras/> <Rinioneras/></div> } />
+            <Route path='/Mochilas' element= {<Mochilas/>} />
+            <Route path='/Carteras' element= {<Carteras/>} />
+            <Route path='/Rinioneras' element= {<Rinioneras/>} />
+
           </Routes>
-          
+
         </BrowserRouter>
       
       </CartProvider>

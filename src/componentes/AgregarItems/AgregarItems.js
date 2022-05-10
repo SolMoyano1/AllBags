@@ -1,3 +1,4 @@
+import './AgregarItems.css';
 import React, {useState,useEffect} from "react"
 
 
@@ -9,15 +10,17 @@ const AgregarItems = () =>{
         setCount(count + 1);
     }
 
-    let quitar= ()=>{
+    /*let quitar= ()=>{
         setCount(count - 1);
     }
-
-    <div>
-        <button onClick={agregar}> + </button>
-        
-        <button onClick={quitar}> - </button>
-    </div>
+    */
+   
+    return(
+        <div className='divAgregarAlCarrito'>
+            <button onClick={agregar} className="botonAgregarAlCarrito"> Agregar al carrito </button>
+        </div>
+    )
+    
 }
 
 export default AgregarItems;

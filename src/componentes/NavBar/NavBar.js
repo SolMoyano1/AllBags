@@ -1,6 +1,6 @@
 import React from "react";
 
-import Button from '@mui/material/Button';
+import './NavBar.css';
 
 import CartWidget from "../CartWidget/CartWidget";
 
@@ -8,16 +8,22 @@ import CartWidget from "../CartWidget/CartWidget";
 function NavBar(props){
 
     console.log("Hola soy sol")
+
+
     return(
-        <header>
+        <header className="fondo">
             <div>
-                <ul>
-                    <button size="small">Mochilas</button>
-                    <button size="small">Carteras</button>
-                    <button size="small">Riñoneras</button>
+                <ul className="barra">
+
+                    <h1 className="titulo"> All Bags</h1>
+
+                    <button className="botones" size="small">Mochilas</button>
+                    <button className="botones" size="small">Carteras</button>
+                    <button className="botones" size="small">Riñoneras</button>
+                    
+                    <CartWidget/>
                 </ul>
             </div>
-
 
         </header>
     )

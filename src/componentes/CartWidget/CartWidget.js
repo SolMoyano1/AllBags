@@ -1,4 +1,5 @@
 import Carrito from "../Multimedia/carrito-de-compras.png";
+import './CartWidget.css';
 import { useContext } from "react";
 import CartContext from "../../context/CartContext";
 import MenuItem from '@mui/material/MenuItem';
@@ -12,12 +13,16 @@ const CartWidget=() => {
     
     return (
         <div>
+            <img className="carritoImg" src={Carrito}></img> 
             
-            <p>{cartProducts.length}</p>
+            <p className="nroProductos">{cartProducts.length}</p>
             
             {cartProducts? cartProducts.map( (cartProduct) => {
                 
                 return(
+
+                    <div>
+                
                         <MenuItem key={cartProduct.id}>
                             
                             <div>
@@ -29,7 +34,8 @@ const CartWidget=() => {
                             </div>
 
                         </MenuItem>
-                    )
+                    </div>
+                )
             }): <div> <h1> No hay productos</h1> </div>
             
             }

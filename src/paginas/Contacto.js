@@ -1,4 +1,4 @@
-function Contacto(props){
+function Carteras(props){
 
     console.log("Hola soy sol")
     return(
@@ -11,4 +11,4 @@ function Contacto(props){
     )
 }
 
-export default Contacto;
+export default Carteras;
