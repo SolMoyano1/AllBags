@@ -1,3 +1,4 @@
+import './paginas.css';
 import ListaRinioneras from "../componentes/ListaProductos/ListaRinioneras";
 
 const Rinioneras =() =>{

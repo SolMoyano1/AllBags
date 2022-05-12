@@ -1,5 +1,4 @@
 import './Tarjetas.css'
-import AgregarItems from '../AgregarItems/AgregarItems'
 import React,{ useState, useEffect, useContext } from 'react'
 //context
 import CartContext from '../../context/CartContext';
@@ -19,11 +18,12 @@ function TarjetasDeArticulos ({caracteristicas, action}){
         console.log("Producto agregado:", tipo, nombre, id);
         //agregarTarjetaAritculo(caracteristicas);
     }*/
+    
     const {agregarProductos} = useContext (CartContext)
 
     return(
         <div className='divTarjetas'>
-            
+
             <p className='caracts'>{tipo} {nombre}</p>
                 
             <img src={`./${foto}`} alt={foto} className="fotos" /> 

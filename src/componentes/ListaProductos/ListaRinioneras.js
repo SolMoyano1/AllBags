@@ -95,7 +95,6 @@ const ListaRinioneras = ({children}) => {
         descripcion:  "100% NYLON. Un compartimiento y un amplio bolsillo al frente, ambos con cierre metálico. Correa regulable",
        },
 
-
     ];
 
 

@@ -1,8 +1,6 @@
 import Carrito from "../Multimedia/carrito-de-compras.png";
 import './CartWidget.css';
 
-import AgregarItems from "../AgregarItems/AgregarItems";
-
 //context
 import { useContext } from "react";
 import CartContext from "../../context/CartContext";

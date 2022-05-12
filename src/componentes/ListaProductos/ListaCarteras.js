@@ -1,7 +1,7 @@
 import './estilos.css';
 import Tarjetas from '../Tarjetas/Tarjetas';
-import AgregarItems from '../AgregarItems/AgregarItems';
-import { useEffect, useState} from 'react';
+import { useEffect, useState, useContext} from 'react';
+import CartContext from '../../context/CartContext';
 
 
 const ListaCarteras = ({children}) => {
@@ -90,21 +90,30 @@ const ListaCarteras = ({children}) => {
         console.log("Lista de Carteras:", arrayCarteras);
     },[])
 
-    
+    const {agregarProductos} = useContext (CartContext)
 
     return(
+
         <div className="grid">
 
-            {productos.map ( (cadaArticulo, index)=> {
-                const {id} = cadaArticulo
-
+            {arrayCarteras.map((producto, index)=>{
+                const {id} = producto
+               
                 return(
-                    <div className='cadaTarjeta' key={index}>
-                        <Tarjetas caracteristicas={cadaArticulo} key={id}/>
+                    <div key={index}>
+                        <Tarjetas caracteristicas={producto} key={id}/>
+
+                        <aside className='asideBtnAgregarALCarrito'>
+                            <button onClick={() => agregarProductos(producto)} className="btnAgregarALCarrito"> Agregar al Carrito</button>
+                        </aside>
                     </div>
+
                     
-                );
-            })};
+                
+                )
+
+                
+            })}
 
         </div>
     )

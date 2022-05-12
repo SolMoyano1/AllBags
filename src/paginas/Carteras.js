@@ -1,3 +1,4 @@
+import './paginas.css';
 import ListaCarteras from "../componentes/ListaProductos/ListaCarteras";
 
 const Carteras =() =>{
