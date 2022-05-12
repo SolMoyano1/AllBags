@@ -14,7 +14,6 @@ const CartWidget=() => {
     const [cartOpen, setCartOpen] = useState(false);
     // obtener la cantidad de productos que tenemos en el carrito
     const [cantProductos, setCantProductos] = useState(0);
-    //productsLength setProductsLength
 
     //actualizar la cantidad de productos
     useEffect(() => {
@@ -23,11 +22,6 @@ const CartWidget=() => {
         );
     }, [cartItems]);
     
-    // Obtener el precio total
-    const total = cartItems?.reduce(
-        (previous, current) => previous + current.amount * current.price,
-        0
-    );
 
     
     console.log("cantidad de productos agregados al carrito: ", cantProductos);
@@ -70,25 +64,7 @@ const CartWidget=() => {
                 )}
             </div>
             
-            {cartItems && cartOpen && (
-                <div>
-
-                  <h2>Tu carrito</h2>
-
-                  {cartItems.length === 0 ? (
-                      <p>Tu carrito esta vacio</p>
-                    ) : (
-                        
-                        <div>
-                            {cartItems.map((item, i) => (
-                                <Carrito key={i} item={item} />
-                            ))}
-                        </div>
-                    )}
-                    <h2>Total: ${total}</h2>
-
-                </div>
-            )}
+            
 
         </div>
       );

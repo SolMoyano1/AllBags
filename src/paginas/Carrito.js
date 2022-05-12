@@ -1,139 +1,61 @@
 
-import { useState, useContext } from "react";
+import { useState, useEffect,useContext } from "react";
 import CartContext from "../context/CartContext";
 
 
 
 const Carrito =() =>{
 
-    const [openModal, setOpenModal] = useState(false)
+    const { cartItems } = useContext(CartContext);
+    // ver si el carrito esta abierto o no 
+    const [cartOpen, setCartOpen] = useState(false);
+    // obtener la cantidad de productos que tenemos en el carrito
+    const [cantProductos, setCantProductos] = useState(0);
 
-    const { cartProducts, deleteProduct, precioTotal } = useContext(CartContext);
 
-    const [formulario, setFormulario] = useState({
-        nombre: '',
-        telefono: '',  
-        mail: '',
-    });
-
-    const [order, setOrder] = useState(
-        {
-            comprador : formulario,
-            productos: cartProducts.map( (cartProduct)=> {
-                return {
-                    id: cartProduct.id,
-                    titulo: cartProduct.titulo,
-                    precio: cartProduct.precio
-                }
-            }),
-            total: precioTotal
-        }
+    //actualizar la cantidad de productos
+    useEffect(() => {
+        setCantProductos(
+            cartItems?.reduce((previous, current) => previous + current.amount, 0)
+        );
+    }, [cartItems]);
+    
+    // Obtener el precio total
+    const total = cartItems?.reduce(
+        (previous, current) => previous + current.amount * current.price,
+        0
     );
 
-    const handleChange = (e) => {
-        const {value, nombre} = e.target
-        console.log("value: ", value)
-        console.log("nombre: ", nombre)
-
-        setFormulario({
-            ...formulario,
-            [nombre]: value
-        })
-    }
-
-
-    
-    console.log("cartProducts: ", cartProducts);
-    
-
-    return(
-        
-
-        <div>
+    return (
+        <div className='margen'>
             
-            {cartProducts.map( (cartProduct) => {
-
-                const { precio, foto, titulo, nombre, id } = cartProduct
-
-                return(
-                <div key={id}>
-
-                    <div>
-                        <p>{titulo} {nombre}</p>
-                    </div>
-                    
-                    <div>
-                        <img src={`./${foto}`} />
-                    </div>
-
-                    <div>
-                        <p>$ {precio}</p>
-                    </div>
-
-                    <div>
-                        <button className='btn-delete' onClick={() => deleteProduct(cartProduct)}>
-                            <h3> Borrar </h3>
-                        </button>
-                    </div>
-                </div>
-                )
-
-                
-
-            })}
-            
-            <div className='margen'>
-
-
-                <button>Continuar comprando</button>
-                
+            {cartItems && cartOpen && (
                 <div>
 
-                    <div>
-                        <p>Subtotal</p>
-                        <span>$ {precioTotal}</span>
-                    </div>
-                    
-                    <div className='cart-checkout__total'>
-                        <p>Total</p>
-                        <span>$ {precioTotal}</span>
-                    </div>
-                    
-                    <button onClick={() => setOpenModal(true)}>Completar Compra</button>
                 </div>
+            )}
+
+            <h1>Tu carrito</h1>
+            
+            {cartItems.length === 0 ? (
+                <p>Tu carrito esta vacio</p>
+                
+            ) : (
+            <div>
+                {cartItems.map((item, i) => (
+                    <div key={i} item={item} />
+                ))}
+                
             </div>
-
-
-
-
-
-
+            
+            )}
+            <h2>Cantidad de productos: {cantProductos}</h2>
+            
+            <h2>Total: ${total}</h2>
 
         </div>
-
-        
-
-        /*<div className='margen'>
-            <h1>Productos en el Carrito</h1>
-
-            {cartProducts? cartProducts.map( (cartProduct) => {
-                
-                return(
-
-                    <div key={cartProduct.id}>
-                        <h1> Hay productos</h1> 
-                    </div>
-                )
-            }): 
-            
-            <div> 
-                <h1> No hay productos</h1> 
-            </div>
-            
-            }
-        </div>*/
-    
     )
+   
 
 }
 
