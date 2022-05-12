@@ -7,18 +7,20 @@ import CartContext from '../../context/CartContext';
 
 
 
-function tarjetasDeArticulos ({caracteristicas, action}){
+function TarjetasDeArticulos ({caracteristicas, action}){
     
     const { tarjetaArticulo, agregarTarjetaAritculo } = useContext(CartContext);
 
     const {foto, tipo, nombre, precio, id}= caracteristicas;
     
 
-    const agregarAlCarrito = (e) => {
+    /*const agregarAlCarrito = (e) => {
         e.stopPropagation();
-        console.log("Productos agregados:", tarjetaArticulo);
-        agregarTarjetaAritculo(caracteristicas);
-    }
+        console.log("Producto agregado:", tipo, nombre, id);
+        //agregarTarjetaAritculo(caracteristicas);
+    }*/
+
+    const {agregarProductos} = useContext (CartContext)
 
     return(
         <div>
@@ -30,7 +32,7 @@ function tarjetasDeArticulos ({caracteristicas, action}){
                  
                 <p className='caracts'>Precio: ${precio}</p>
 
-                <button onClick={agregarAlCarrito}> <AgregarItems /></button>
+                <button onClick={() => agregarProductos(caracteristicas)} className="btnAgregarALCarrito"> Agregar al Carrito</button>
 
             </aside>
 
@@ -38,5 +40,5 @@ function tarjetasDeArticulos ({caracteristicas, action}){
     )
 }
 
-export default tarjetasDeArticulos;
+export default TarjetasDeArticulos;
 

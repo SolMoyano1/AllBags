@@ -91,20 +91,18 @@ const ListaMochilas = ({children}) => {
         })
     },[])
 
-    console.log("Lista de Mochilas:", productos);
+    console.log("Lista de Mochilas:", arrayMochilas);
 
     return(
         <div className="grid">
-
-            <h2> {children} </h2>
-            {productos.map ( (cadaArticulo, index)=> {
+            
+            {arrayMochilas.map ( (producto, index)=> {
                 
-                const {id} = cadaArticulo
+                const {id} = producto
 
                 return(
-                    <div key={index} >
-                        <Tarjetas  caracteristicas={cadaArticulo} key={id}/>
-                        <AgregarItems />
+                    <div className='cadaTarjeta' key={index} >
+                        <Tarjetas  caracteristicas={producto} key={id}/>
                     </div>
                     
                 );

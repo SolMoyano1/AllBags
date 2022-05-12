@@ -10,3 +10,10 @@
 .caracts{
     text-align: center;
 }
+
+.btnAgregarALCarrito{
+    background-color: black;
+    padding: 0px;
+    width: 100%;
+    color: white;
+}

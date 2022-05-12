@@ -4,7 +4,7 @@ import React, {useState,useEffect} from "react"
 
 const AgregarItems = () =>{
     
-    const [count, setCount]= useState (0);
+    const [count, setCount]= React.useState (0);
 
     let agregar= ()=>{
         setCount(count + 1);
@@ -17,7 +17,7 @@ const AgregarItems = () =>{
    
     return(
         <div className='divAgregarAlCarrito'>
-            <button onClick={agregar} className="botonAgregarAlCarrito"> Agregar al carrito </button>
+            <aside onClick={agregar} className="botonAgregarAlCarrito"> Agregar al carrito </aside>
         </div>
     )
     

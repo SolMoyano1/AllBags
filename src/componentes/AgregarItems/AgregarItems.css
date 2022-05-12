@@ -11,5 +11,6 @@
 .divAgregarAlCarrito{
     align-items: center;
     display: grid;
+    background-color: rgb(37, 37, 37);
 
 }

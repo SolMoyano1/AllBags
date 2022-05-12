@@ -117,8 +117,6 @@ const ListaRinioneras = ({children}) => {
     return(
         <div className="grid">
 
-            <h2> {children} </h2>
-
             {productos.map ( (cadaArticulo, index)=> {
                 const {id} = cadaArticulo
 
