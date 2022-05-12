@@ -1,12 +1,14 @@
 .carritoImg{
-    width: 40px;
-    height: 40px;
-    margin: 10px 0px;
-
+    width: 30px;
+    height: 27px;
+    margin: -3px 0px;
 }
 
 .nroProductos{
-    margin-top: -47px;
-    margin-left: 50px;
+    margin-top: -190px;
+    margin-left: 8px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
 
 }

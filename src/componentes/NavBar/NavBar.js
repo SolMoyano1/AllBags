@@ -31,7 +31,10 @@ function NavBar(props){
                         <Link to={'/Rinioneras'}>Riñoneras</Link>
                     </button>
 
-                    <Link to={'/Carrito'}></Link>
+                    <button className="botones" size="small">
+                        <Link to={'/Carrito'}><CartWidget/></Link>
+                    </button>
+                    
 
                         
                 </ul>
