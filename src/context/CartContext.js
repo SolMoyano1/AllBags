@@ -1,50 +1,3 @@
-/*
-import { createContext, useState } from "react";
-
-const CartContext = createContext();
-
-
-const CartProvider = ({children}) => {
-   
-    const [cartProducts, setCartProducts] = useState([])
-    
-    const [precioTotal, setPrecioTotal] = useState([])
-
-    const añadirAlCarrito = (articulos) => {
-       
-        let exist = cartProducts.find(cartProduct => cartProduct.id === articulos.id)
-        
-        if(!exist) { 
-
-            setPrecioTotal(precioTotal + articulos.price)
-            setCartProducts(cartProducts => [...cartProducts, articulos])
-        }
-    }
-
-    const eliminarArticulo = (articulos) => {
-        setCartProducts(cartProducts.filter( cartProduct => cartProduct.id !== articulos.id))
-    }
-
-    const data = {
-
-        cartProducts,
-        añadirAlCarrito,
-        precioTotal,
-        eliminarArticulo
-    }
-
-    return(
-        <CartContext.Provider value={data}>
-            {children}
-        </CartContext.Provider>
-    )
-}
-
-export { CartProvider }
-export default CartContext 
-
-*/
-
 import { createContext, useEffect, useState } from "react";
 
 const CartContext = createContext();
@@ -66,7 +19,7 @@ const CartProvider = ({children}) =>{
 
     useEffect (() => {
         localStorage.setItem("cartProducts", JSON.stringify(cartItems));
-        console.log(cartItems)
+        console.log("HOla", cartItems)
     }, [cartItems]);
 
 
@@ -77,14 +30,17 @@ const CartProvider = ({children}) =>{
         );
 
         if (enElCarrito){
-            setCartItems.map((productoEnElCarrito) => {
-                if (productoEnElCarrito.id === producto.id){
-                    return { ...enElCarrito, amount: enElCarrito.amount + 1}
-                }
-                else{
-                    return productoEnElCarrito;
-                }
-            })
+            setCartItems(
+                cartItems.map((productoEnElCarrito) => {
+                    if (productoEnElCarrito.id === producto.id){
+                        return { ...enElCarrito, amount: enElCarrito.amount + 1}
+                    }
+                    else{
+                        return productoEnElCarrito;
+                    }
+                })
+            )
+            
         }
         else{
             setCartItems ([...cartItems, {...producto, amount : 1}])

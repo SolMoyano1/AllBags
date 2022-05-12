@@ -87,9 +87,10 @@ const ListaCarteras = ({children}) => {
 
             setProductos(res);
         })
+        console.log("Lista de Carteras:", arrayCarteras);
     },[])
 
-    console.log("Lista de Carteras:", productos);
+    
 
     return(
         <div className="grid">

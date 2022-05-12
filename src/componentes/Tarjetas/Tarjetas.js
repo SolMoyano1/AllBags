@@ -19,22 +19,16 @@ function TarjetasDeArticulos ({caracteristicas, action}){
         console.log("Producto agregado:", tipo, nombre, id);
         //agregarTarjetaAritculo(caracteristicas);
     }*/
-
     const {agregarProductos} = useContext (CartContext)
 
     return(
-        <div>
-
-            <aside >
-                <p className='caracts'>{tipo} {nombre}</p>
-                 
-                <img src={`./${foto}`} alt={foto} className="fotos" /> 
-                 
-                <p className='caracts'>Precio: ${precio}</p>
-
-                <button onClick={() => agregarProductos(caracteristicas)} className="btnAgregarALCarrito"> Agregar al Carrito</button>
-
-            </aside>
+        <div className='divTarjetas'>
+            
+            <p className='caracts'>{tipo} {nombre}</p>
+                
+            <img src={`./${foto}`} alt={foto} className="fotos" /> 
+                
+            <p className='caracts'>Precio: ${precio}</p>
 
         </div>
     )

@@ -9,11 +9,10 @@
 
 .caracts{
     text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
-
-.btnAgregarALCarrito{
-    background-color: black;
-    padding: 0px;
-    width: 100%;
-    color: white;
+.divTarjetas{
+    margin: 0px 50px;
+    text-align: center;
 }

@@ -8,3 +8,19 @@
 .cadaTarjeta{
     padding: 30px 40px;
 }
+.asideBtnAgregarALCarrito{
+    align-items: center;
+    margin-right: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.btnAgregarALCarrito{
+    background-color: black;
+    padding: 8px;
+    width: 75%;
+    align-items: center;
+    text-align: center;
+    color: white;
+    
+}
