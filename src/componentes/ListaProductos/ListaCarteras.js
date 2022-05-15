@@ -107,17 +107,10 @@ const ListaCarteras = ({children}) => {
                             <button onClick={() => agregarProductos(producto)} className="btnAgregarALCarrito"> Agregar al Carrito</button>
                         </aside>
                     </div>
-
-                    
-                
                 )
-
-                
             })}
-
         </div>
     )
 
 }
-
 export default ListaCarteras;

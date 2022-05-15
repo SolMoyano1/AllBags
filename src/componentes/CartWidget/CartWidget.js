@@ -17,10 +17,10 @@ const CartWidget=() => {
 
     //actualizar la cantidad de productos
     useEffect(() => {
-        setCantProductos(
-            cartItems?.reduce((previous, current) => previous + current.amount, 0)
+        setCantProductos( cartItems?.reduce((previous, current) => previous + current.amount, 0)
         );
     }, [cartItems]);
+
     
 
     
@@ -72,13 +72,3 @@ const CartWidget=() => {
 }
 
 export default CartWidget;
-
-/*import { ItemCart } from "../ItemCart";
-
-const Cart = () => {
-
-
-};
-
-export default Cart;*/
-

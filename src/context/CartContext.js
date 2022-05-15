@@ -19,7 +19,7 @@ const CartProvider = ({children}) =>{
 
     useEffect (() => {
         localStorage.setItem("cartProducts", JSON.stringify(cartItems));
-        console.log("HOla", cartItems)
+        console.log("Productos agregados:", cartItems)
     }, [cartItems]);
 
 
@@ -49,17 +49,16 @@ const CartProvider = ({children}) =>{
  //BORRAR PRODUCTOS
 
     const borrarProductos = (producto) => {
-        const enElCarrito = cartItems.find(
-            (productoEnElCarrito) => productoEnElCarrito.id === producto.id
+        const enElCarrito = cartItems.find((productoEnElCarrito) => productoEnElCarrito.id === producto.id
         );
 
         if (enElCarrito.amount === 1){
             setCartItems(
-                cartItems.filter((productoEnElCarrito) => productoEnElCarrito.id !== producto.id)
-            )  
+                cartItems.filter((productoEnElCarrito) => productoEnElCarrito.id !== producto.id))  
         }
         else{
-            setCartItems ((productoEnElCarrito) => {
+            setCartItems (
+                cartItems.map((productoEnElCarrito) => {
 
                 if(productoEnElCarrito.id === producto.id){
                     return {... enElCarrito, amount: enElCarrito.amount - 1}
@@ -67,15 +66,12 @@ const CartProvider = ({children}) =>{
                 else{
                     return productoEnElCarrito;
                 }
-            })
+            }))
         };
     }
 
     return(
-           <CartContext.Provider
-               value={{cartItems, agregarProductos, borrarProductos}}
-           >
-
+           <CartContext.Provider value={{cartItems, agregarProductos, borrarProductos}}>
                {children}
             </CartContext.Provider> 
     )
