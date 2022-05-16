@@ -2,56 +2,33 @@ import './paginas.css';
 import React, { useContext } from "react";
 import CartContext from "../context/CartContext";
 import { ListItem } from '@mui/material';
+import TarjetaCarrito from '../componentes/TarjetaCarrito/TarjetaCarrito';
 
-function Carrito ( producto){
+function Carrito (producto){
 
     const {agregarProductos, borrarProductos} = useContext(CartContext);
 
-    const {id} = producto;
-    
-    
-    return(
-        <div className='margen'>
-            
-            <img src={`./${producto.foto}`} alt={producto.foto} /> 
-             <p> prod: {producto.tipo} {producto.nombre}</p>
-            
-            <div>
-                
-                <p key={producto.precio}>Precio: ${producto.precio}</p>
-                
-                <p>nombre{producto.tipo} {producto.nombre}</p>
-                
-                <div>
-                    <button onClick={() => agregarProductos(producto)}> Agregar </button>
-                    <button onClick={() => borrarProductos(producto)}> Quitar </button>
-                </div>
+    const {id, nombre} = producto;
 
-                <div>
-                    {producto.amount}
-                    <p>Total: ${producto.amount * producto.precio}</p>
-                </div>
-                       
-            </div>
-            
+    const { cartItems } = useContext(CartContext);
+    
+    
+
+    return(
+
+        <div className='margen'>
+
+            {cartItems.map((producto, index)=>{
+                const {id} = producto
+               
+                return(
+                    <div key={index}>
+                        <TarjetaCarrito caracteristicas={producto} key={id}/>
+                    </div>
+                )
+            })}
         </div>
     )
-    
-    /*<img src={foto} alt={caracteristicas.tipo}/>
-            
-            <p>{tipo} {nombre}</p>
-
-            <div>
-                <button> Agregar </button>
-                <button> Quitar </button>
-            </div>
-            
-            
-            <div>
-                {caracteristicas.amount}
-                <p>Total: ${caracteristicas.amount * caracteristicas.precio}</p>
-            </div>*/
-
 
 
 
