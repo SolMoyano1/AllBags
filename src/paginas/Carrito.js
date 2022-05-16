@@ -22,19 +22,19 @@ function Carrito (producto){
 
         <div className='margen'>
 
-            <p>Productos en tu carrito:</p>
+            <h1>Productos en tu carrito:</h1>
 
             {cartItems.map((producto, index)=>{
                 const {id} = producto
                
                 return(
                     <div key={index}>
-                        <TarjetaCarrito caracteristicas={producto} key={id}/>
+                        <TarjetaCarrito className="tarjCarr" caracteristicas={producto} key={id}/>
                     </div>
                 )
             })}
             
-            <p>TOTAL: {total}</p>
+            <p className='total'>TOTAL: {total}</p>
         </div>
     )
 

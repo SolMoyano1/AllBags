@@ -19,7 +19,7 @@ function TarjetaCarrito({caracteristicas, action}){
             
             <div className='tarjetasGrid'>
                 
-                <div className='margenFotosCarrito'>
+                <div className='divGrid1'>
                   <p>{tipo} {nombre}</p>
                   <img src={`./${foto}`} alt={foto} className="fotosCarrito" /> 
                 </div>

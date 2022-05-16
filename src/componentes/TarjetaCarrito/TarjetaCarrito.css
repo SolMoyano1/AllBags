@@ -1,18 +1,17 @@
 .tarjetasGrid{
     display: grid;
     grid-template-columns:  1fr 1fr;
-    margin-top: 40px;
+    margin-top: 0px;
     margin-left: 90px;
     margin-right: 90px;
     
 }
 
-.margenFotosCarrito{
+.divGrid1{
     background-color: rgb(41, 41, 41);
     margin-left: 40px;
     padding: 5px 0px;
     text-align: center;
-    margin-bottom: 40px;
     color: white;
 }
 
@@ -26,7 +25,6 @@
     margin-left: 0px;
     padding: 5px 0px;
     text-align: center;
-    margin-bottom: 40px;
     margin-right: 70px;
 
 }
