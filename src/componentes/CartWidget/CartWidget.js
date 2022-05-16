@@ -21,23 +21,10 @@ const CartWidget=() => {
         );
     }, [cartItems]);
 
-    
-
-    
 
     
     console.log("cantidad de productos agregados al carrito: ", cantProductos);
-/*
-    return (
-        <div>
-            <img className="carritoImg" src={Carrito}></img> 
-            
-            <p className="nroProductos" >{cartProducts.length}</p>
-            
-        </div>
-        
-    )
-*/
+
 
     return (
         <div>

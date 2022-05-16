@@ -1,0 +1,48 @@
+.tarjetasGrid{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    margin-top: 40px;
+    margin-left: 90px;
+    margin-right: 90px;
+    
+}
+
+.margenFotosCarrito{
+    background-color: rgb(41, 41, 41);
+    margin-left: 40px;
+    padding: 5px 0px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.fotosCarrito{
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.divGrid2{
+    background-color: rgb(41, 41, 41);
+    margin-left: 0px;
+    padding: 5px 0px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-right: 70px;
+
+}
+
+.margenInfoCarrito{
+    margin-right: 20px;
+    margin-top: 53px;
+    padding: 10px 5px;
+    height:380px;
+    background-color: rgb(255, 255, 255);
+}
+
+.botonQuitarAgregar{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+}

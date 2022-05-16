@@ -20,15 +20,15 @@ function NavBar(props){
                     <h1 className="titulo"> All Bags</h1>
 
                     <button className="botones" size="small">
-                        <Link to={'/Mochilas'}>Mochilas</Link>
+                        <Link className="nombresBotones" to={'/Mochilas'}>Mochilas</Link>
                     </button>
 
                     <button className="botones" size="small">
-                        <Link to={'/Carteras'}>Carteras</Link>
+                        <Link className="nombresBotones" to={'/Carteras'}>Carteras</Link>
                     </button>
 
                     <button className="botones" size="small">
-                        <Link to={'/Rinioneras'}>Riñoneras</Link>
+                        <Link className="nombresBotones" to={'/Rinioneras'}>Riñoneras</Link>
                     </button>
 
                     <button className="botones" size="small">

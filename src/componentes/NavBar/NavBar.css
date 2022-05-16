@@ -16,7 +16,9 @@
 }
 
 .titulo{
-    margin: 10px 0px;
+    margin: 5px 0px;
+    text-align: left;
+    padding-left: 30px;
 }
 
 .botones{
@@ -24,7 +26,13 @@
     width: 100px;
     padding: 5px;
     margin: 15px 0px;
-    background-color: whitesmoke;
+    background-color: white;
     border: none;
 
+}
+
+.nombresBotones{
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
 }
