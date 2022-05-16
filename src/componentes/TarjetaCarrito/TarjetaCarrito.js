@@ -26,10 +26,28 @@ function TarjetaCarrito({caracteristicas, action}){
                 
                 <div className='divGrid2'>
                     <div className='margenInfoCarrito'>
-                        <p>Medidas: {medidas}</p>
-                        <p>Descripcion: {descripcion}</p>
-                        <p>Precio: ${precio}</p>
-                        <p>Unidades agregadas: {caracteristicas.amount}</p>
+
+                        <div className='gridCaracts'>
+                            <p className='nombreCaracts'>Medidas:</p>
+                            <p className='medidas'> {medidas}</p>
+                        </div>
+                         
+                        <div className='gridCaracts'>
+                            <p className='nombreCaracts'>Descripcion: </p>
+                            <p className='descripcion'>{descripcion}</p>
+                        </div>
+                         
+                        <div className='gridCaracts'>
+                            <p className='nombreCaracts'>Precio:</p>
+                            <p className='precio'>${precio}</p>
+                        </div>
+
+                        <div className='gridCaracts'>
+                           <p className='nombreCaracts'>Agregadas: </p>
+                           <p className='agregadas'>{caracteristicas.amount}</p>
+                        </div>
+                        
+                         
                         
                         <button onClick={() => agregarProductos(caracteristicas)} className="botonQuitarAgregar"> Agregar </button>
                         <button onClick={() => borrarProductos(caracteristicas)} className="botonQuitarAgregar"> Quitar </button>

@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns:  1fr 1fr;
     margin-top: 0px;
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 140px;
+    margin-right: 110px;
     
 }
 
@@ -26,6 +26,45 @@
     padding: 5px 0px;
     text-align: center;
     margin-right: 70px;
+}
+
+.gridCaracts{
+    
+    display: grid;
+    grid-template-columns:  1fr 4fr;
+    
+}
+
+.nombreCaracts{
+    font-weight: bold;
+    text-align: left;
+    max-width: 80px;
+    margin-left: 10px;
+    margin-top: 20px ;
+    font-size: 14px;
+}
+.medidas{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+.descripcion{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.precio{
+    text-align: left;
+    margin-top: 20px;
+    margin-left:-10px;
+}
+
+.agregadas{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 10px;
 
 }
 
