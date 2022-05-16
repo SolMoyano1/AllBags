@@ -12,11 +12,17 @@ function Carrito (producto){
 
     const { cartItems } = useContext(CartContext);
     
+    const total = cartItems?.reduce(
+        (previous, current) => previous + current.amount * current.precio,
+        0
+    );
     
 
     return(
 
         <div className='margen'>
+
+            <p>Productos en tu carrito:</p>
 
             {cartItems.map((producto, index)=>{
                 const {id} = producto
@@ -27,6 +33,8 @@ function Carrito (producto){
                     </div>
                 )
             })}
+            
+            <p>TOTAL: {total}</p>
         </div>
     )
 

@@ -11,17 +11,10 @@ function TarjetaCarrito({caracteristicas, action}){
   
     const {foto, tipo, nombre, precio, descripcion, medidas, id}= caracteristicas;
     
-    const {agregarProductos, borrarProductos} = useContext(CartContext);
-
-
-    /*const agregarAlCarrito = (e) => {
-        e.stopPropagation();
-        console.log("Producto agregado:", tipo, nombre, id);
-        //agregarTarjetaAritculo(caracteristicas);
-    }*/
-
+    const {agregarProductos, borrarProductos, cartItems} = useContext(CartContext);
 
     return(
+        
         <div className='divPadre'>
             
             <div className='tarjetasGrid'>
@@ -41,15 +34,13 @@ function TarjetaCarrito({caracteristicas, action}){
                         <button onClick={() => agregarProductos(caracteristicas)} className="botonQuitarAgregar"> Agregar </button>
                         <button onClick={() => borrarProductos(caracteristicas)} className="botonQuitarAgregar"> Quitar </button>
                        
-                        <p>Total: $ {caracteristicas.amount} * {precio}</p>
                     </div> 
                 </div>
+                
             </div>
-        
         </div>
     )
     
 }
 
 export default TarjetaCarrito;
-
