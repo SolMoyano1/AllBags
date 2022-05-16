@@ -24,6 +24,8 @@ const CartWidget=() => {
     
 
     
+
+    
     console.log("cantidad de productos agregados al carrito: ", cantProductos);
 /*
     return (
