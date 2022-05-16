@@ -17,6 +17,7 @@ function NavBar(props){
                 
                 
                 <ul className="barra">
+                    
                     <h1 className="titulo"> All Bags</h1>
 
                     <button className="botones" size="small">

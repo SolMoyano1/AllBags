@@ -22,5 +22,10 @@
     align-items: center;
     text-align: center;
     color: white;
-    
+    cursor:pointer;
+
+}
+
+.btnAgregarALCarrito:hover{
+    font-size: 15px;
 }
