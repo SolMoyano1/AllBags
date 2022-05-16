@@ -12,7 +12,7 @@ function TarjetasDeArticulos ({caracteristicas, action}){
     
     const { tarjetaArticulo, agregarTarjetaAritculo } = useContext(CartContext);
 
-    const {foto, tipo, nombre, precio, id}= caracteristicas;
+    const {foto, tipo, nombre, precio, color, id}= caracteristicas;
     
 
     /*const agregarAlCarrito = (e) => {
@@ -26,7 +26,7 @@ function TarjetasDeArticulos ({caracteristicas, action}){
     return(
         <div className='divTarjetas'>
 
-            <p className='caracts'>{tipo} {nombre}</p>
+            <p className='caracts'>{tipo} {nombre} {color}</p>
                 
             <img src={`./${foto}`} alt={foto} className="fotos" /> 
                 
