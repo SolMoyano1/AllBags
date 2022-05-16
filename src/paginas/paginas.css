@@ -16,3 +16,21 @@
 h1{
     text-align: center;
 }
+
+.divTerminarCompra{
+    text-align: center;
+    align-items: center;
+}
+
+.btnTerminarCompra{
+    background-color: rgb(249, 249, 249);
+    color: black;
+    padding: 5px;
+    margin: 10px;
+    width: 200px;
+    font-size: 19px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+
+    
+}

@@ -35,6 +35,10 @@ function Carrito (producto){
             })}
             
             <p className='total'>TOTAL: {total}</p>
+
+            <div className='divTerminarCompra'>
+                <button className='btnTerminarCompra'>Terminar Compra</button> 
+            </div>
         </div>
     )
 
