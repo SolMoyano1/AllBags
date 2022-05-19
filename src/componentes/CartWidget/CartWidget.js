@@ -33,7 +33,7 @@ const CartWidget=() => {
             
             <div onClick={() => setCartOpen(!cartOpen)}>
                 
-                <div>
+                <div className="divCarritoImg">
                     
                     {!cartOpen ? (
                         <svg>

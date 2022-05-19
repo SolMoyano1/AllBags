@@ -1,7 +1,7 @@
 import './paginas.css';
 import React, { useContext } from "react";
+import { Link } from 'react-router-dom';
 import CartContext from "../context/CartContext";
-import { ListItem } from '@mui/material';
 import TarjetaCarrito from '../componentes/TarjetaCarrito/TarjetaCarrito';
 
 function Carrito (producto){
@@ -33,12 +33,17 @@ function Carrito (producto){
                     </div>
                 )
             })}
-            
-            <p className='total'>TOTAL: {total}</p>
+            <div className='divTotal'>
+                <p className='total'>TOTAL: {total}</p>
+            </div>
+
 
             <div className='divTerminarCompra'>
-                <button className='btnTerminarCompra'>Terminar Compra</button> 
+                <button className='btnSiguiente'>
+                    <Link className='palabraSiguiente' to={'/Formulario'}>Siguiente</Link>
+                </button> 
             </div>
+
         </div>
     )
 
@@ -48,9 +53,7 @@ function Carrito (producto){
 }
 
 export default Carrito;
-/*const Carrito =({producto}) =>{
-
-    
+/*
     
     const { agregarProductos, borrarProductos, cartItems } = useContext(CartContext);
     
@@ -67,38 +70,4 @@ export default Carrito;
     );
     
 
-    return (
-
-        <div className='margen'>
-
-            <h1>Tu carrito</h1>
-            
-            {cartItems.length === 0 ? (
-                <p>Tu carrito esta vacio</p>
-                
-            ) : (
-
-            <div>
-                {cartItems.map((item, i) => (
-                    <div key={i} item={item}>
-                        <h2>CHau:</h2>
-                        
-                        
-                    </div> 
-                ))}
-                
-            </div>
-            
-            )}
-            <h2>Cantidad de productos: {cantProductos}</h2>
-            
-            <h2>Total: ${total}</h2>
-
-        </div>
-    )
-   
-
-}
-
-export default Carrito;
 */

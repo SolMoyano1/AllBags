@@ -29,3 +29,58 @@
 .btnAgregarALCarrito:hover{
     font-size: 15px;
 }
+
+
+/*MOBILE*/
+@media (min-width:150px) and (max-width:599px){
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 10px;
+        padding: 0px 0px;
+    }
+    
+    .cadaTarjeta{
+        padding: 0px 0px;
+    }
+    
+    .asideBtnAgregarALCarrito{
+        margin-right: 0px;
+        margin-bottom: 40px;
+    }
+    
+    .btnAgregarALCarrito{
+        padding: 6px;
+    
+    }
+    
+    .btnAgregarALCarrito:hover{
+        font-size: 13px;
+    }
+
+}
+
+
+/*TABLET*/
+@media (min-width:600px) and (max-width:900px){
+
+    .grid{
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr;
+        margin: 10px;
+        padding: 10px 0px;
+    }
+    
+    .cadaTarjeta{
+        padding: 30px 0px;
+        background-color: red;
+    }
+    .asideBtnAgregarALCarrito{
+        align-items: center;
+        margin-right: 0px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+}

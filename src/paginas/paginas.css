@@ -1,18 +1,25 @@
 .margen{
     margin-top: 0px;
     padding-top: 100px;
-    padding-left: 3px;  
+}
+
+.divTotal{
+    margin-left: 5%;
+    margin-right: 5.7%;
+    background-color: rgb(0, 0, 0);
+
 }
 
 .total{
     text-align: center;
-    margin: 0px 180px;
+    margin: 0px 5%;
     color: white;
     background-color: rgb(0, 0, 0);
     font-size: 25px;
     padding: 5px;
     letter-spacing: 3px;
 }
+
 h1{
     text-align: center;
 }
@@ -22,9 +29,8 @@ h1{
     align-items: center;
 }
 
-.btnTerminarCompra{
+.btnSiguiente{
     background-color: rgb(249, 249, 249);
-    color: black;
     padding: 5px;
     margin: 10px;
     width: 200px;
@@ -32,6 +38,63 @@ h1{
     letter-spacing: 2px;
     font-weight: lighter;
     cursor:pointer;
-
     
+}
+
+.btnSiguiente:hover{
+    text-decoration: underline rgb(20, 20, 20);
+}
+
+.palabraSiguiente{
+    color: black;
+    text-decoration: none;
+}
+
+
+/*MOBILE*/
+@media (min-width:250px) and (max-width:599px){
+
+
+    .margen{
+        margin-top: 0px;
+        padding-top: 50px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .divTotal{
+        margin-right: 5%;
+        margin-left: 6%;
+        background-color: rgb(0, 0, 0);
+
+    }
+
+    .total{
+        text-align: center; 
+        align-items: center;
+        font-size: 18px;
+        margin-right: 5px;
+        margin-left: 5px;
+        padding: 10px;
+        width: 89%;
+    }
+
+}
+
+
+
+/*TABLET*/
+@media (min-width:600px) and (max-width:900px){
+
+    .divTotal{
+        margin-right: 5%;
+        margin-left: 6%;
+        background-color: rgb(0, 0, 0);
+
+    }
+   
+
 }

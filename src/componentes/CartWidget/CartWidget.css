@@ -10,5 +10,31 @@
     text-decoration: none;
     color: black;
     font-size: 13px;
+}
+
+/*MOBILE*/
+@media (min-width:150px) and (max-width:599px){
+
+    .carritoImg{
+        width: 25px;
+        height: 22px;
+        margin-top: -100px;
+        margin-left: 0px;
+        padding-top: 9px;
+        padding-bottom: 6px;
+    }
+
+    .nroProductos{
+        margin-top: -39px;
+        margin-left: 2px;
+        text-decoration: none;
+        color: black;
+        font-size: 12px;
+    }
+
+    .divCarritoImg{
+        height: 1px;
+        width: 10px;
+    }
 
 }

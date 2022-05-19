@@ -48,10 +48,11 @@ function TarjetaCarrito({caracteristicas, action}){
                         </div>
                         
                          
-                        
-                        <button onClick={() => agregarProductos(caracteristicas)} className="botonQuitarAgregar"> Agregar </button>
-                        <button onClick={() => borrarProductos(caracteristicas)} className="botonQuitarAgregar"> Quitar </button>
-                       
+                        <div className='gridCelu'>
+                            <button onClick={() => agregarProductos(caracteristicas)} className="botonQuitarAgregar"> Agregar </button>
+                            <button onClick={() => borrarProductos(caracteristicas)} className="botonQuitarAgregar"> Quitar </button>
+                        </div>
+
                     </div> 
                 </div>
                 

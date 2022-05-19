@@ -17,7 +17,7 @@ const ListaCarteras = ({children}) => {
          id: 1,
          color: "Marrón",
          medidas: "35 x 40 x 13 cm",
-         descripcion: "Cartera 100% cuero PU. Forrada por dentro. Dos asas de transporte, una correa regulable extensible y un llavero.",
+         descripcion: "100% cuero PU. Forrada por dentro. Dos asas de transporte, una correa regulable extensible y un llavero.",
         },
 
         {foto: 'multimedia/carteraCeliaNegro.jpg',
@@ -27,7 +27,7 @@ const ListaCarteras = ({children}) => {
          id: 2,
          color: "Negro",
          medidas: "35 x 40 x 13 cm",
-         descripcion: "Cartera 100% cuero PU. Forrada por dentro. Dos asas de transporte, una correa regulable extensible y un llavero.",
+         descripcion: "100% cuero PU. Forrada por dentro. Dos asas de transporte, una correa regulable extensible y un llavero.",
         },
 
         {foto: 'multimedia/carteraMargeBlanco.jpg',
@@ -37,7 +37,7 @@ const ListaCarteras = ({children}) => {
          id: 3,
          color: "Blanco",
          medidas: "30 x 36 x 11 cm",
-         descripcion: "Cartera 100% cuero PU. Forrada por dentro. Dos asas de transporte, una correa regulable extensible y un llavero.",
+         descripcion: "100% cuero PU. Forrada por dentro. Dos asas de transporte, una correa regulable extensible y un llavero.",
         },
 
         {foto: 'multimedia/carteraMargeRojo.jpg',
@@ -47,7 +47,7 @@ const ListaCarteras = ({children}) => {
          id: 4,
          color: "Rojo",
          medidas: "30 x 36 x 11 cm",
-         descripcion: "Cartera 100% cuero PU. Forrada por dentro. Dos asas de transporte, una correa regulable extensible y un llavero.",
+         descripcion: "100% cuero PU. Forrada por dentro. Dos asas de transporte, una correa regulable extensible y un llavero.",
         },
 
         {foto: 'multimedia/carteraMargeNegro.jpg',
@@ -57,7 +57,7 @@ const ListaCarteras = ({children}) => {
          id: 5,
          color: "Negro",
          medidas: "30 x 36 x 11 cm",
-         descripcion: "Cartera 100% cuero PU. Forrada por dentro. Dos asas de transporte, una correa regulable extensible y un llavero.",
+         descripcion: "100% cuero PU. Forrada por dentro. Dos asas de transporte, una correa regulable extensible y un llavero.",
         },
 
         {foto: 'multimedia/carteraMargeMarron.jpg',
@@ -67,7 +67,7 @@ const ListaCarteras = ({children}) => {
          id: 6,
          color: "Marrón",
          medidas: "30 x 36 x 11 cm",
-         descripcion: "Cartera 100% cuero PU. Forrada por dentro. Dos asas de transporte, una correa regulable extensible y un llavero.",
+         descripcion: "100% cuero PU. Forrada por dentro. Dos asas de transporte, una correa regulable extensible y un llavero.",
         },
 
 

@@ -1,7 +1,5 @@
 import React from "react";
-
 import './NavBar.css';
-import { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import CartWidget from "../CartWidget/CartWidget";
@@ -17,7 +15,7 @@ function NavBar(props){
                 
                 
                 <ul className="barra">
-                    
+
                     <h1 className="titulo"> All Bags</h1>
 
                     <button className="botones" size="small">
@@ -33,8 +31,9 @@ function NavBar(props){
                     </button>
 
                     <button className="botones" size="small">
-                        <Link to={'/Carrito'}><CartWidget/></Link>
+                        <Link className="nombresBotones" to={'/Carrito'}><CartWidget/></Link>
                     </button>
+
                     
 
                         

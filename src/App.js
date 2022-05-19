@@ -9,6 +9,7 @@ import Carteras from './paginas/Carteras';
 import Mochilas from './paginas/Mochilas';
 import Rinioneras from './paginas/Rinioneras';
 import Carrito from './paginas/Carrito';
+import Formulario from './paginas/Formulario';
 
 //context
 import { CartProvider } from './context/CartContext';
@@ -35,6 +36,7 @@ function App() {
             <Route path='/Carteras' element= {<Carteras/>} />
             <Route path='/Rinioneras' element= {<Rinioneras/>} />
             <Route path='/Carrito' element= {<Carrito/>} />
+            <Route path='/Formulario' element= {<Formulario/>} />
 
 
           </Routes>
